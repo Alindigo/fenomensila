@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FENOMEN – Мектептің жетістіктері</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial;
+    background-color: darkblue;
+}
+
+h1{
+    text-align:center;
+    padding:30px;
+    color:white;
+    font-size:40px;
+}
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+    padding-bottom:40px;
+}
+
+/* ✅ БАРЛЫҚ КАРТОЧКА 230px */
+.card{
+    background:white;
+    width:230px;
+    border-radius:20px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.2);
+    overflow:hidden;
+    text-align:center;
+}
+
+.slide{ display:none; }
+
+.slide img{
+    width:100%;
+    height:275px;
+    object-fit:contain;
+    background:white;
+}
+
+.text{
+    padding:15px;
+    color:#004aad;
+    font-size:20px;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Мектептің жетістіктері</h1>
+
+<div class="cards">
+
+<!-- 🔵 ҰБТ -->
+<div class="card" id="s1">
+<div class="slide"><img src="ubt4.jpeg"></div>
+<div class="slide"><img src="ubt2.jpeg"></div>
+<div class="slide"><img src="ubt3.jpeg"></div>
+<div class="slide"><img src="ubt1.jpeg"></div>
+<div class="slide"><img src="ubt5.jpeg"></div>
+<div class="slide"><img src="ubt7.jpeg"></div>
+<div class="slide"><img src="ubt8.jpeg"></div>
+<div class="slide"><img src="ubt9.jpeg"></div>
+<div class="slide"><img src="ubt10.jpeg"></div>
+<div class="slide"><img src="ubt11.jpeg"></div>
+<div class="slide"><img src="12.jpeg"></div>
+<div class="slide"><img src="13.jpeg"></div>
+<div class="slide"><img src="14.jpeg"></div>
+<div class="slide"><img src="16.jpeg"></div>
+<div class="slide"><img src="17.jpeg"></div>
+<div class="slide"><img src="18.jpeg"></div>
+<div class="slide"><img src="19.jpeg"></div>
+<div class="slide"><img src="20.jpeg"></div>
+<div class="slide"><img src="21.jpeg"></div>
+<div class="slide"><img src="22.jpeg"></div>
+<div class="slide"><img src="23.jpeg"></div>
+<div class="slide"><img src="24.jpeg"></div>
+<div class="text">ҰБТ жетістіктері</div>
+</div>
+
+<!-- 🔵 ҒЫЛЫМИ ЖОБА -->
+<div class="card" id="s2">
+<div class="slide"><img src="71.jpeg"></div>
+<div class="slide"><img src="73.jpeg"></div>
+<div class="text">Ғылыми жоба</div>
+</div>
+
+<!-- 🔵 ОЛИМПИАДА -->
+<div class="card" id="s3">
+<div class="slide"><img src="71.jpeg"></div>
+<div class="slide"><img src="72.jpeg"></div>
+<div class="slide"><img src="73.jpeg"></div>
+<div class="slide"><img src="74.jpeg"></div>
+<div class="slide"><img src="75.jpeg"></div>
+<div class="text">Пәндер олимпиадасы</div>
+</div>
+
+</div>
+
+<script>
+function autoSlider(id){
+let slides=document.querySelectorAll("#"+id+" .slide");
+let i=0;
+
+if(slides.length>0){
+slides[i].style.display="block";
+
+setInterval(()=>{
+slides[i].style.display="none";
+i++;
+if(i>=slides.length) i=0;
+slides[i].style.display="block";
+},1000);
+}
+}
+
+window.onload=function(){
+autoSlider("s1");
+autoSlider("s2");
+autoSlider("s3");
+}
+</script>
+
+</body>
+</html>

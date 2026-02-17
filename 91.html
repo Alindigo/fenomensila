@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<title>FENOMEN – ҰБТ жетістіктері</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:linear-gradient(to right,#4facfe,#00f2fe);
+    text-align:center;
+}
+
+h1{
+    color:white;
+    padding:30px;
+}
+
+/* СЛАЙДЕР */
+.slider{
+    position:relative;
+    width:320px;
+    margin:auto;
+}
+
+.slide{
+    display:none;
+}
+
+.slide img{
+    width:100%;
+    border-radius:20px;
+}
+
+/* СТРЕЛКАЛАР */
+.prev, .next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:30px;
+    background:white;
+    border:none;
+    padding:8px 12px;
+    cursor:pointer;
+    border-radius:50%;
+}
+
+.prev{ left:-40px; }
+.next{ right:-40px; }
+</style>
+</head>
+
+<body>
+
+<h1>ҰБТ жетістіктері</h1>
+
+<div class="slider">
+
+<div class="slide">
+<img src="ubt1.jpg">
+<p>Жоғары балл алған оқушылар</p>
+</div>
+
+<div class="slide">
+<img src="ubt2.jpg">
+<p>Грант иегерлері</p>
+</div>
+
+<div class="slide">
+<img src="ubt3.jpg">
+<p>Үздік сынып</p>
+</div>
+
+<div class="slide">
+<img src="ubt4.jpg">
+<p>Мұғалімдер еңбегі</p>
+</div>
+
+<button class="prev" onclick="changeSlide(-1)">❮</button>
+<button class="next" onclick="changeSlide(1)">❯</button>
+
+</div>
+
+<script>
+let index = 0;
+showSlide(index);
+
+function changeSlide(n){
+    index += n;
+    showSlide(index);
+}
+
+function showSlide(n){
+    let slides = document.getElementsByClassName("slide");
+    if(n >= slides.length) index = 0;
+    if(n < 0) index = slides.length-1;
+
+    for(let i=0;i<slides.length;i++)
+        slides[i].style.display="none";
+
+    slides[index].style.display="block";
+}
+</script>
+
+</body>
+</html>

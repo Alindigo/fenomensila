@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FENOMEN – Мектептің жетістіктері</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial;
+     background-color: darkblue;
+}
+
+h1{
+    text-align:center;
+    padding:30px;
+    color:white;
+    font-size:40px;
+}
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+    padding-bottom:40px;
+}
+
+/* ҮЛКЕН КАРТОЧКА */
+.card{
+    background:white;
+    width:245px;          /* ҮЛКЕН */
+    border-radius:20px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.2);
+    overflow:hidden;
+    text-align:center;
+}
+
+/* СЛАЙДЕР */
+.slider{
+    position:relative;
+}
+
+.slide{
+    display:none;
+}
+
+.slide img{
+    width:100%;
+    height:300px;          /* ҮЛКЕН СУРЕТ */
+    object-fit:contain;    /* Фото толық көрінеді */
+    background:black;
+}
+
+/* СТРЕЛКАЛАР */
+.prev, .next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:white;
+    border:none;
+    padding:8px 12px;
+    cursor:pointer;
+    border-radius:50%;
+    font-size:20px;
+}
+
+.prev{ left:10px; }
+.next{ right:10px; }
+
+.text{
+    padding:15px;
+    color:#004aad;
+    font-size:20px;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Мектептің жетістіктері</h1>
+
+<div class="cards">
+
+<!-- ҰБТ СЛАЙДЕР -->
+<div class="card">
+
+<div class="slider">
+
+<div class="slide">
+<img src="ubt4.jpeg">
+</div>
+
+<div class="slide">
+<img src="ubt2.jpeg">
+</div>
+
+<div class="slide">
+<img src="ubt3.jpeg">
+</div>
+
+<div class="slide">
+<img src="ubt1.jpeg">
+</div>
+
+<div class="slide">
+<img src="ubt5.jpeg">
+</div>
+
+<div class="slide">
+<img src="ubt7.jpeg">
+</div>
+
+<div class="slide">
+<img src="ubt8.jpeg">
+</div>
+
+<div class="slide">
+<img src="ubt9.jpeg">
+</div><div class="slide">
+<img src="ubt10.jpeg">
+</div><div class="slide">
+<img src="ubt11.jpeg">
+</div><div class="slide">
+<img src="12.jpeg">
+</div><div class="slide">
+<img src="13.jpeg">
+</div><div class="slide">
+<img src="14.jpeg">
+</div><div class="slide">
+<img src="16.jpeg">
+</div><div class="slide">
+<img src="16.jpeg">
+</div><div class="slide">
+<img src="17.jpeg">
+</div><div class="slide">
+<img src="18.jpeg">
+</div><div class="slide">
+<img src="19.jpeg">
+</div>
+
+<div class="slide">
+<img src="20.jpeg">
+</div><div class="slide">
+<img src="21.jpeg">
+</div><div class="slide">
+<img src="22.jpeg">
+</div><div class="slide">
+<img src="23.jpeg">
+</div><div class="slide">
+<img src="24.jpeg">
+</div>
+<button class="prev" onclick="changeSlide(-1)">❮</button>
+<button class="next" onclick="changeSlide(1)">❯</button>
+
+</div>
+
+<div class="text">ҰБТ жетістіктері</div>
+
+</div>
+
+<!-- ҒЫЛЫМИ ЖОБА -->
+<div class="card">
+<img src="science.jpg" style="width:100%;height:300px;object-fit:contain;background:black;">
+<div class="text">Ғылыми жоба</div>
+</div>
+
+<!-- ОЛИМПИАДА -->
+<div class="card">
+<img src="olymp.jpg" style="width:100%;height:300px;object-fit:contain;background:black;">
+<div class="text">Пәндер олимпиадасы</div>
+</div>
+
+</div>
+
+<script>
+let index = 0;
+showSlide(index);
+
+function changeSlide(n){
+    let slides = document.getElementsByClassName("slide");
+    slides[index].style.display="none";
+    index += n;
+
+    if(index >= slides.length) index = 0;
+    if(index < 0) index = slides.length-1;
+
+    slides[index].style.display="block";
+}
+
+function showSlide(n){
+    let slides = document.getElementsByClassName("slide");
+    for(let i=0;i<slides.length;i++)
+        slides[i].style.display="none";
+
+    slides[n].style.display="block";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<link rel="icon" href="Әсел.jpeg">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FENOMEN</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Times New Roman", serif;
+}
+
+html{scroll-behavior:smooth;}
+
+body{background:DodgerBlue;}
+
+/* ===== ОҢ ЖАҚ АШЫЛМАЛЫ МЕНЮ ===== */
+
+.menu-btn{
+    position:fixed;
+    right:20px;
+    top:20px;
+    font-size:26px;
+    background:black;
+    color:white;
+    padding:10px 15px;
+    border-radius:8px;
+    cursor:pointer;
+    z-index:2000;
+}
+
+.sidebar{
+    position:fixed;
+    top:0;
+    right:-230px;
+    width:230px;
+    height:100%;
+    background:white;
+    padding-top:80px;
+    transition:0.4s;
+    box-shadow:-3px 0 10px rgba(0,0,0,0.4);
+    z-index:1500;
+}
+
+.sidebar a{
+    display:block;
+    padding:15px 20px;
+    text-decoration:none;
+    color:black;
+    font-size:18px;
+}
+
+.sidebar a:hover{background:#eee;}
+
+.sidebar.active{right:0;}
+
+.overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.45);
+    display:none;
+    z-index:1400;
+}
+
+.overlay.show{display:block;}
+
+/* ===== SECTIONS ===== */
+
+section{
+    min-height:100vh;
+    padding:120px 10% 60px 10%;
+}
+
+/* ===== HOME ===== */
+
+#home{
+    background:url("логотипп.jpg") center no-repeat;
+    background-size:cover;
+    background-color:white;
+}
+
+/* ===== JUL ===== */
+
+#jul{
+    background:DarkBlue;
+    color:white;
+    text-align:center;
+}
+
+.top-cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:40px;
+    flex-wrap:wrap;
+}
+
+.bottom-card{
+    display:flex;
+    justify-content:center;
+    margin-top:30px;
+}
+
+.box{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    width:280px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    transition:0.3s;
+    color:black;
+}
+
+.box:hover{transform:translateY(-8px);}
+
+.box img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+/* ===== ABOUT ===== */
+
+#about{
+    background:SteelBlue;
+    color:white;
+    text-align:center;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.card{
+    background:white;
+    padding:15px;
+    border-radius:15px;
+    transition:0.3s;
+}
+
+.card:hover{transform:translateY(-5px);}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.card p{
+    margin-top:10px;
+    color:black;
+}
+
+.card button{
+    margin-top:15px;
+    padding:10px 20px;
+    border:none;
+    background:#764ba2;
+    color:white;
+    border-radius:25px;
+    cursor:pointer;
+}
+
+.card button:hover{background:#667eea;}
+
+.card a{color:white;text-decoration:none;}
+
+#contact{
+    background:DodgerBlue;
+    color:white;
+    text-align:center;
+    font-size:30px;
+}
+
+#ulken{font-size:70px;}
+
+</style>
+</head>
+
+<body>
+
+<!-- ☰ батырма -->
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<!-- қара фон -->
+<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+<!-- оң жақ меню -->
+<div class="sidebar" id="sidebar">
+    <a href="#home" onclick="toggleMenu()">Басты бет</a>
+    <a href="#jul" onclick="toggleMenu()">Мектеп жайлы</a>
+    <a href="#about" onclick="toggleMenu()">Ұстаздар</a>
+    <a href="#contact" onclick="toggleMenu()">Пәндер</a>
+</div>
+
+<section id="home"></section>
+
+<section id="jul">
+<h1>Біздің мектеп туралы</h1>
+
+<div class="top-cards">
+<div class="box">
+<a href="Мектептің тарихы.html"><img src="тарихы.jpeg"></a>
+<h3>Мектептің тарихы</h3>
+</div>
+
+<div class="box">
+<a href="19.html"><img src="Ашылған жыл.jpeg"></a>
+<h3>Ашылған жылы</h3>
+</div>
+</div>
+
+<div class="bottom-card">
+<div class="box">
+<a href="18.html"><img src="https://pm-production-bucket.s3.eu-central-1.amazonaws.com/attachments/blog/image/935/attachment/default-30f8ee0d056fe0fcdfe649f6b9cec0db.jpg"></a>
+<h3>Мақсаты мен миссиясы</h3>
+</div>
+</div>
+</section>
+
+<section id="about">
+<h1 id="ulken">Ұстаздар</h1>
+
+<div class="gallery">
+
+<div class="card">
+<img src="Е.jpeg">
+<p>Ержан Жанысбайұлы</p>
+<button><a href="Ержан ағай док.html">Толығырақ</a></button>
+</div>
+
+<div class="card">
+<img src="Нұрәділ ағай.jpeg">
+<p>Нұрәділ Нұрланұлы</p>
+<button><a href="Нұрәділ ағай док.html">Толығырақ</a></button>
+</div>
+
+<div class="card">
+<img src="І.jpeg">
+<p>Ілияс Сұлтанбекұлы</p>
+<button><a href="ілияс ағай док.html">Толығырақ</a></button>
+</div>
+
+<div class="card">
+<img src="Ор.jpg">
+<p>Оразкүл Құдайбергенқызы</p>
+<button><a href="Оразкүл апай док.html">Толығырақ</a></button>
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+Пәндер бөлімі
+</section>
+
+<script>
+function toggleMenu(){
+    document.getElementById("sidebar").classList.toggle("active");
+    document.getElementById("overlay").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+<html>
+<head>
+<title>ilyas agai</title>
+</head>
+<body background="І.jpeg">
+<button>
+<a href="gpt.html"> artqa </a></button>
+</body>
+</html>

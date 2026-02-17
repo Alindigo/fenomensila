@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<link rel="icon" href="Әсел.jpeg">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FENOMEN</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+justify-content:center;
+    font-family: Times New Roman;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    height: 150vh;
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    color: white;
+}
+
+#home {
+background-image:url("FENOMEN.jpeg"); background-position:center; background-repeat: no-repeat; background-quality: high; text-emphasis-position: under; 
+
+}
+
+#jul {
+    background-color:DarkBlue;
+
+}
+
+
+#about {
+    background-color:SteelBlue;
+
+}
+
+
+
+#contact {
+    background-color:DodgerBlue;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: blue;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content center;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background: #764ba2;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background: #667eea;
+    transform: scale(1.05);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+a:link {
+  color: white;
+}
+a:visited {
+  color: white;
+}
+a:hover {
+  color: blue;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#home">Басты бет</a>
+    <a href="#jul">Мектеп жайлы</a>
+    <a href="#about">Ұстаздар</a>
+    <a href="#contact">Пәндер/сабақтар </a>
+</nav>
+<section id="home"></section>
+<section id="jul"><a href="Мектеп жайлы.html"></a></section>
+<section id="about">
+    <div class="about-container">
+        <h2 align="center">Ұстаздар</h2><br>
+
+        <div class="gallery">
+            
+            <div class="card">
+                <img src="Е.jpeg" alt="">
+		<font color=black size=4 >Ержан<br>Жанысбайұлы</font>
+                <button><a href="Ержан ағай док.html">Толығырақ</a></button>
+            </div>
+
+            <div class="card">
+                <img src="Г.jpeg" alt="">
+		<font color=black size=4 >Гүлшат<br>Еркінбекқызы</font>
+                <button><a href="Ілияс ағай.html">Толығырақ</a></button>
+            </div>
+
+            <div class="card">
+                <img src="І.jpeg" alt="" >
+		<font color=black size=4 >Ілияс<br>Сұлтанбекұлы</font>
+                <button><a href="ілияс ағай док.html">Толығырақ</a></button>
+            </div>
+
+            <div class="card">
+                <img src="Нұ.jpeg" alt="">
+		<font color=black size=4 >Нұрәділ<br>Нұрланұлы</font>
+                <button><a href="Нұрәділ ағай док.html">Толығырақ</a></button>
+            </div>
+
+            <div class="card">
+                <img src="М.jpeg" alt="">
+		<font color=black size=4 >Мұхит<br>Елубекұлы</font>
+                <button><a href="Мұхит ағай док.html">Толығырақ</a></button>
+            </div>
+
+            <div class="card">
+                <img src="О.jpeg" alt="">
+		<font color=black size=4 >Оразкүл<br>Құдайбергенқызы</font>
+                <button><a href="Оразкүл апай док.html">Толығырақ</a></button>
+            </div>
+
+            <div class="card">
+                <img src="А.jpeg" alt="">
+		<font color=black size=4 >Альбина<br>Дарынқызы</font>
+                <button><a href="Альбина апай док.html">Толығырақ</a></button>
+            </div>
+
+            <div class="card">
+                <img src="Нү.jpeg" alt="">
+		<font color=black size=4 >Нүркен<br>Темірбекұлы</font>
+                <button><a href="Нүркен ағай док.html">Толығырақ</a></button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section id="contact">пәндер</section>
+
+</body>
+</html>
